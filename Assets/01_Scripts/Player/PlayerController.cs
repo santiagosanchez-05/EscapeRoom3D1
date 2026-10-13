@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         Vector3 movement = new Vector3(h, 0f, v);
+        if (movement.magnitude > 1f) movement.Normalize();
         transform.Translate(movement * speed * Time.deltaTime);
     }
 }
