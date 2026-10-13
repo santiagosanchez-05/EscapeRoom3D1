@@ -1,5 +1,6 @@
 using UnityEngine;
 
+/// <summary>Controla el progreso del puzzle que desbloquea el cofre.</summary>
 public class PuzzleManager : MonoBehaviour
 {
     [SerializeField] private int totalPieces = 3;
