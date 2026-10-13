@@ -8,9 +8,8 @@ public class DoorController : MonoBehaviour
     [ContextMenu("Open")]
     public void Open()
     {
-        if (isOpen) return;
-        isOpen = true;
-        transform.Rotate(0f, openAngle, 0f);
-        Debug.Log("Door opened");
+        // Bug introducido: la puerta se traba y arroja error
+        Debug.LogError("Error crítico: Mecanismo de la puerta trabado, no abre.");
+        return;
     }
 }
