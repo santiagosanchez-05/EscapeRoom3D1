@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
         float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? speed * 2f : speed;
 
         Vector3 movement = new Vector3(h, 0f, v);
+        if (movement.magnitude > 1f) movement.Normalize();
         transform.Translate(movement * currentSpeed * Time.deltaTime);
     }
 }
