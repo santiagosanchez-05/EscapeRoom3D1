@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c3234743d404f438bc1f3020fbf345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 8
+  speed: 6
 --- !u!95 &8083954341403106206
 Animator:
   serializedVersion: 7
