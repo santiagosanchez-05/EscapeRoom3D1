@@ -19,8 +19,9 @@ public class PlayerController : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+        float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? speed * 2f : speed;
 
         Vector3 movement = new Vector3(h, 0f, v);
-        transform.Translate(movement * speed * Time.deltaTime);
+        transform.Translate(movement * currentSpeed * Time.deltaTime);
     }
 }
