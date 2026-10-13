@@ -26,3 +26,6 @@ Thumbs.db
 
 # Crash reports
 sysinfo.txt
+
+# Carpeta temporal del laboratorio
+TempLaboratorio/

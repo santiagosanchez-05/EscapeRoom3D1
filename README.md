@@ -28,4 +28,6 @@ Explorar una habitación, resolver un código, abrir un cofre, obtener una llave
 - `main`: versión estable, solo recibe cambios mediante Pull Request desde Dev.
 - `Dev`: rama de integración del equipo.
 - `Feature_*`: cada integrante trabaja en su Feature, creada siempre desde Dev.
+
+- Controles: WASD o flechas para moverse, E para interactuar
   
