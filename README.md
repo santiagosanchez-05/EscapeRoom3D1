@@ -6,6 +6,8 @@ Proyecto colaborativo de laboratorio de Git + GitHub + Visual Studio Code + Unit
 - Antonio Santiago Sánchez Angulo
 - Mateo Alejandro Valeriano Sánchez
 - Rommel Rodrigo Gutierrez Herrera
+- Johnny Suarez Abasto
+- Jhael Elisa Guevara Silva
 
 ## Ramas
 - main
