@@ -7,6 +7,7 @@ public class OldDoorController : MonoBehaviour
     public void OpenDoor()
     {
         isOpen = true;
-        Debug.Log("Old door opened");
+        transform.Rotate(0f, 90f, 0f);
+        Debug.Log("Old door opened (fixed)");
     }
 }
