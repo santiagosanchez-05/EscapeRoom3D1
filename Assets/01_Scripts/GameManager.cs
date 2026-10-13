@@ -6,9 +6,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        // Inicialización del juego
+        Debug.Log("Iniciando juego desde Interaction");
+        Initialize();
     }
-
     public void Initialize()
     {
         initCount++;
