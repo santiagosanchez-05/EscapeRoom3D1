@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        // Inicialización del juego
+        Debug.Log("Iniciando juego desde Puzzle");
+        Initialize();
     }
 
     public void Initialize()
