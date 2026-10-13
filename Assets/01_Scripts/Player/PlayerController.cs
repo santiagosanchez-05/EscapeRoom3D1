@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    
     [Tooltip("Velocidad de movimiento del jugador")]
     public float speed = 5f;
 
