@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Debug.Log("Iniciando juego desde Interaction");
-        Initialize();
+        this.Initialize();
     }
     public void Initialize()
     {
