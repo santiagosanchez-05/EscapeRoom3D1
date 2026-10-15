@@ -6,6 +6,8 @@ Proyecto colaborativo de laboratorio de Git + GitHub + Visual Studio Code + Unit
 - Antonio Santiago Sánchez Angulo
 - Mateo Alejandro Valeriano Sánchez
 - Rommel Rodrigo Gutierrez Herrera
+- Johnny Suarez Abasto
+- Jhael Elisa Guevara Silva
 
 ## Ramas
 - main
@@ -17,3 +19,15 @@ Proyecto colaborativo de laboratorio de Git + GitHub + Visual Studio Code + Unit
 
 ## Objetivo
 Explorar una habitación, resolver un código, abrir un cofre, obtener una llave y abrir la puerta de salida.
+
+## Información del proyecto
+- Motor: Unity 6000.5.6f1
+
+  
+## Estrategia de ramas
+- `main`: versión estable, solo recibe cambios mediante Pull Request desde Dev.
+- `Dev`: rama de integración del equipo.
+- `Feature_*`: cada integrante trabaja en su Feature, creada siempre desde Dev.
+
+- Controles: WASD o flechas para moverse, E para interactuar
+  
