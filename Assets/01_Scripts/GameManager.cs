@@ -6,10 +6,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Iniciando juego desde Puzzle");
+        Debug.Log("Iniciando juego");
         Initialize();
     }
-
     public void Initialize()
     {
         initCount++;
