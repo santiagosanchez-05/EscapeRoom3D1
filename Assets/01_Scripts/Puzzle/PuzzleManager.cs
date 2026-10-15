@@ -24,7 +24,7 @@ public class PuzzleManager : MonoBehaviour
             return false;
         }
         IsSolved = code == correctCode;
-        Debug.Log(IsSolved ? "Puzzle completado: el cofre se puede abrir" : "Código incorrecto");
+        Debug.Log(IsSolved ? "Código correcto: puzzle resuelto exitosamente y cofre listo para abrir." : "Código incorrecto");
         return IsSolved;
     }
 
