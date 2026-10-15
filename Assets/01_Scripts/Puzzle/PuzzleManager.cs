@@ -1,38 +1,48 @@
 using UnityEngine;
 
-/// <summary>Controla el progreso del puzzle que desbloquea el cofre.</summary>
-public class PuzzleManager : MonoBehaviour
+/// <summary>Teclado numérico del cofre: valida el código y desbloquea el cofre.</summary>
+public class PuzzleManager : MonoBehaviour, IInteractable
 {
-    [SerializeField] private int totalPieces = 3;
     [SerializeField] private string correctCode = "1234";
-    [SerializeField] private AudioClip puzzleSoundEffect; // WIP audio
-    [SerializeField] private float timeLimit = 60f; // WIP timer
-    private int solvedPieces;
+    [SerializeField] private ChestController chest;
+
     public bool IsSolved { get; private set; }
 
-    public void SolvePiece()
+    public string Prompt => IsSolved ? "Teclado (resuelto)" : "Usar teclado numérico";
+
+    public void Interact()
     {
-        if (IsSolved) return;
-        solvedPieces++;
-        Debug.Log($"Pieza resuelta {solvedPieces}/{totalPieces}");
-    }
-    /// <summary>Valida el código ingresado para desbloquear el cofre.</summary>
-    public bool CheckCode(string code)
-    {
-        if (solvedPieces < totalPieces)
+        if (IsSolved)
         {
-            Debug.Log("Faltan piezas por resolver");
-            return false;
+            GameUI.Instance?.ShowMessage("El teclado ya está resuelto. El cofre está desbloqueado.");
+            return;
         }
-        IsSolved = code == correctCode;
-        Debug.Log(IsSolved ? "Código correcto: puzzle resuelto exitosamente y cofre listo para abrir." : "Código incorrecto");
-        return IsSolved;
+
+        GameUI.Instance?.OpenCodePanel(this);
     }
 
-    // Prueba en Play Mode: P = resolver pieza, C = enviar código
-    private void Update()
+    /// <summary>Valida el código ingresado para desbloquear el cofre.</summary>
+    /// <param name="code">Código introducido por el jugador.</param>
+    /// <returns>true si el código es correcto.</returns>
+    public bool CheckCode(string code)
     {
-        if (Input.GetKeyDown(KeyCode.P)) SolvePiece();
-        if (Input.GetKeyDown(KeyCode.C)) CheckCode(correctCode);
+        if (IsSolved) return true;
+
+        IsSolved = code == correctCode;
+
+        if (IsSolved)
+        {
+            GameUI.Instance?.ShowMessage("Código correcto. Se escuchó un clic en el cofre.");
+            if (chest != null)
+                chest.Unlock();
+            else
+                Debug.LogWarning("PuzzleManager no tiene un cofre asignado.");
+        }
+        else
+        {
+            GameUI.Instance?.ShowMessage("Código incorrecto.");
+        }
+
+        return IsSolved;
     }
 }
