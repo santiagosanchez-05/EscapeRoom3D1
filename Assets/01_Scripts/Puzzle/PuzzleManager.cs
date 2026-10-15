@@ -16,7 +16,7 @@ public class PuzzleManager : MonoBehaviour
         solvedPieces++;
         Debug.Log($"Pieza resuelta {solvedPieces}/{totalPieces}");
     }
-
+    /// <summary>Valida el código ingresado para desbloquear el cofre.</summary>
     public bool CheckCode(string code)
     {
         if (solvedPieces < totalPieces)
