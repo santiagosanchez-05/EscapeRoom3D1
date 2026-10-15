@@ -5,7 +5,7 @@ public class PuzzleManager : MonoBehaviour
 {
     [SerializeField] private int totalPieces = 3;
     [SerializeField] private string correctCode = "1234";
-
+    [SerializeField] private AudioClip puzzleSoundEffect; // WIP audio
     private int solvedPieces;
     public bool IsSolved { get; private set; }
 
